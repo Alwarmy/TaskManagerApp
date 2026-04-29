@@ -30,8 +30,8 @@ public final class Task {
         if (title == null || title.trim().isEmpty()) {
             throw new IllegalArgumentException("Task title must not be empty.");
         }
-        if (description == null) {
-            throw new IllegalArgumentException("Task description must not be null.");
+        if (description == null || description.trim().isEmpty()) {
+            throw new IllegalArgumentException("Task description must not be empty.");
         }
 
         this.id = id;
